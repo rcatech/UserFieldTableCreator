@@ -32,7 +32,8 @@
   <ItemGroup>
     <Reference Include="Interop.SAPbobsCOM">
       <HintPath>..\..\Seidor_CuboIntegra\Dlls\Interop.SAPbobsCOM.dll</HintPath>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,9 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CriadorCampos.cs" />
+    <Compile Include="CriadorObjetos.cs" />
     <Compile Include="CriadorTabelas.cs" />
     <Compile Include="Exceptions\Exception.cs" />
     <Compile Include="Models\Campo.cs" />
+    <Compile Include="Models\Objeto.cs" />
     <Compile Include="Models\Tabela.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -6,37 +6,37 @@ using System.Threading.Tasks;
 
 namespace CriaCampos.Exceptions
 {
-    class DescriptionIsNullOrWhiteSpace : Exception
+    public class DescriptionIsNullOrWhiteSpace : Exception
     {
 
     }
 
-    class TableNameIsNullOrWhiteSpace : Exception
+    public class TableNameIsNullOrWhiteSpace : Exception
     {
 
     }
 
-    class TipoTabelaIsNull : Exception
+    public class TipoTabelaIsNull : Exception
     {
 
     }
 
-    class ArquivavelIsNull : Exception
+    public class ArquivavelIsNull : Exception
     {
 
     }
 
-    class NameIsNullOrWhiteSpace : Exception
+    public class NameIsNullOrWhiteSpace : Exception
     {
 
     }
 
-    class ObrigatorioIsNull : Exception
+    public class ObrigatorioIsNull : Exception
     {
 
     }
 
-    class TipoIsNull : Exception
+    public class TipoIsNull : Exception
     {
 
     }

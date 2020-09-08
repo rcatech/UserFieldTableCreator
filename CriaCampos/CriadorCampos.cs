@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CriaCampos
 {
-    static class CriadorCampos
+    public static class CriadorCampos
     {
         /// <summary>
         /// Cria o campo dentro do company informado
@@ -28,10 +28,13 @@ namespace CriaCampos
             oUser.Mandatory = campo.Obrigatorio;
             oUser.Type = campo.Tipo;
 
+            if (!String.IsNullOrEmpty(campo.TabelaSAPLinked))
+                oUser.LinkedTable = campo.TabelaSAPLinked;
+
             if (campo.SubTipo != null)
-                oUser.SubType = campo.SubTipo;
+                oUser.SubType = (BoFldSubTypes)campo.SubTipo;
             if (campo.Tamanho != null)
-                oUser.EditSize = campo.Tamanho;
+                oUser.EditSize = (int)campo.Tamanho;
             if (!String.IsNullOrWhiteSpace(campo.ValorPadrao))
                 oUser.DefaultValue = campo.ValorPadrao;
 
@@ -57,10 +60,6 @@ namespace CriaCampos
                 throw new NameIsNullOrWhiteSpace();
             if(String.IsNullOrWhiteSpace(campo.Description))
                 throw new DescriptionIsNullOrWhiteSpace();
-            if(campo.Obrigatorio == null)
-                throw new ObrigatorioIsNull();
-            if (campo.Tipo == null)
-                throw new TipoIsNull();
         }
     
         /// <summary>

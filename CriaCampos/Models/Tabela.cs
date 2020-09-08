@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CriaCampos.Models
 {
-    class Tabela
+    public class Tabela
     {
 
         public string TableName { get; set; }

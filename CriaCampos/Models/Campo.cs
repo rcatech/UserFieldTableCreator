@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CriaCampos.Models
 {
-    class Campo
+    public class Campo
     {
         public string TableName { get; set; }
 
@@ -17,12 +17,14 @@ namespace CriaCampos.Models
 
         public BoFieldTypes Tipo { get; set; }
 
-        public int Tamanho { get; set; }
+        public int? Tamanho { get; set; }
 
         public string ValorPadrao { get; set; }
 
-        public BoFldSubTypes SubTipo { get; set; }
+        public BoFldSubTypes? SubTipo { get; set; }
 
         public BoYesNoEnum Obrigatorio { get; set; }
+
+        public string TabelaSAPLinked { get; set; }
     }
 }

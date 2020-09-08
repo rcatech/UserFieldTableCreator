@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CriaCampos
 {
-    static class CriadorTabelas
+    public static class CriadorTabelas
     {
         /// <summary>
         /// Cria a tabela dentro do SAP Business One
@@ -20,7 +20,7 @@ namespace CriaCampos
         {
             ValidarTabela(oUserTb);
 
-            UserTablesMD oTbMd = oCmp.GetBusinessObject(BoObjectTypes.oUserTables);
+            UserTablesMD oTbMd = (UserTablesMD)oCmp.GetBusinessObject(BoObjectTypes.oUserTables);
             oTbMd.TableName = oUserTb.TableName;
             oTbMd.TableDescription = oUserTb.Description;
             oTbMd.TableType = oUserTb.TipoTabela;
