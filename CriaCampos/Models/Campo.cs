@@ -26,5 +26,7 @@ namespace CriaCampos.Models
         public BoYesNoEnum Obrigatorio { get; set; }
 
         public string TabelaSAPLinked { get; set; }
+        
+        public List<ValoresValidos> ValoresValidos { get; set; }
     }
 }

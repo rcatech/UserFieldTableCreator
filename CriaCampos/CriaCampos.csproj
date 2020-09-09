@@ -52,6 +52,7 @@
     <Compile Include="Models\Campo.cs" />
     <Compile Include="Models\Objeto.cs" />
     <Compile Include="Models\Tabela.cs" />
+    <Compile Include="Models\ValoresValidos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

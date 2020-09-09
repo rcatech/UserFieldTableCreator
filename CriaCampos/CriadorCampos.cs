@@ -30,13 +30,25 @@ namespace CriaCampos
 
             if (!String.IsNullOrEmpty(campo.TabelaSAPLinked))
                 oUser.LinkedTable = campo.TabelaSAPLinked;
-
             if (campo.SubTipo != null)
                 oUser.SubType = (BoFldSubTypes)campo.SubTipo;
             if (campo.Tamanho != null)
                 oUser.EditSize = (int)campo.Tamanho;
             if (!String.IsNullOrWhiteSpace(campo.ValorPadrao))
                 oUser.DefaultValue = campo.ValorPadrao;
+
+            if(campo.ValoresValidos != null)
+            {
+                int n = 0;
+                foreach (ValoresValidos valorValido in campo.ValoresValidos)
+                {
+                    n++;
+                    oUser.ValidValues.Description = valorValido.Descricao;
+                    oUser.ValidValues.Value = valorValido.Valor;
+                    if (n < campo.ValoresValidos.Count)
+                        oUser.ValidValues.Add();
+                }
+            }
 
             int res = oUser.Add();
 
